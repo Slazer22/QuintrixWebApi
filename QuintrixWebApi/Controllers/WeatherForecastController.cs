@@ -19,7 +19,7 @@ namespace QuintrixWebApi.Controllers
         {
             _logger = logger;
         }
-
+        //Only accessible to the users that has a Admin role. 
         [HttpGet(Name = "GetWeatherForecast"), Authorize(Roles = "Admin")]
         public IEnumerable<WeatherForecast> Get()
         {
